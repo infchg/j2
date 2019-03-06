@@ -1,5 +1,9 @@
 # j2 Heroku 
 
+
+[![Build Status](https://travis-ci.org/infchg/j2.svg)](https://travis-ci.org/infchg/j2) Passed 2019 Mar 6th 
+
+
 ## Standalone mode in your own docker or server
 
 ``` bash
