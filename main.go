@@ -14,11 +14,15 @@ func determineListenAddress() (string, error) {
 }
 
 func hola(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintln(w, "Hi this is J2 http response")
+fmt.Fprintln(w, "<h1> This is the human readable response </h1>  The J2 app can respond to this <a href=/json>/json</a> url with HTTP JSON data.  Deployed Probes and Sensors push data to <a href=/write>/write</a>  ")
+}
+
+func jso(w http.ResponseWriter, r *http.Request) {
+  fmt.Fprintln(w, "{\"response\":\"this is J2 http response\"}")
 }
 
 func hstat(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintln(w, "<a href=/>.</a> this URL for receiving updates vias http response")
+  fmt.Fprintln(w, "<a href=/>Home</a></br> The /write URL is for receiving updates via http from Deployed Sensors in the field")
 }
 
 
@@ -29,6 +33,7 @@ func main() {
   }
   http.HandleFunc("/write", hstat)
   http.HandleFunc("/", hola)
+  http.HandleFunc("/json", jso)
   log.Printf("Listening on %s...\n", addr)
   if err := http.ListenAndServe(addr, nil); err != nil {
     panic(err)
