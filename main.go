@@ -12,15 +12,23 @@ func determineListenAddress() (string, error) {
   }
   return ":" + port, nil
 }
-func hello(w http.ResponseWriter, r *http.Request) {
+
+func hola(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintln(w, "Hi this is J2 http response")
 }
+
+func hstat(w http.ResponseWriter, r *http.Request) {
+  fmt.Fprintln(w, "<a href=/>.</a> this URL for receiving updates vias http response")
+}
+
+
 func main() {
   addr, err := determineListenAddress()
   if err != nil {
     log.Fatal(err)
   }
-  http.HandleFunc("/", hello)
+  http.HandleFunc("/write", hstat)
+  http.HandleFunc("/", hola)
   log.Printf("Listening on %s...\n", addr)
   if err := http.ListenAndServe(addr, nil); err != nil {
     panic(err)
