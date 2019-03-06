@@ -4,6 +4,9 @@
 
 ``` bash
 
+go get -u github.com/infchg/j2 
+
+
 go install ./...
 
 PORT=3333 $GOPATH/bin/j2-hi
@@ -20,6 +23,18 @@ Hi this is J2 http response
 ```
 
 ## Cloud run on Heroku
+
+echo "web: j2" > Procfile
+
+git add Procfile
+
+git commit -m Procfile
+
+
+
+go get -u github.com/tools/godep
+
+
 
 
 ## Cloud run on GC 
