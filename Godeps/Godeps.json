@@ -1,0 +1,9 @@
+{
+	"ImportPath": "github.com/infchg/j2",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": []
+}
