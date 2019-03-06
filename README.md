@@ -1,1 +1,27 @@
 # j2 Heroku 
+
+## Standalone mode in your own docker or server
+
+``` bash
+
+go install ./...
+
+PORT=3333 $GOPATH/bin/j2-hi
+
+curl -i http://localhost:3333
+
+HTTP/1.1 200 OK
+Date: Wed, 06 Mar 2019 00:26:40 GMT
+Content-Length: 28
+Content-Type: text/plain; charset=utf-8
+
+Hi this is J2 http response
+
+```
+
+## Cloud run on Heroku
+
+
+## Cloud run on GC 
+
+
