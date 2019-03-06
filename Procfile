@@ -1,1 +1,1 @@
-web: j2-hi
+web: j2
