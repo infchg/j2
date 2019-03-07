@@ -50,7 +50,7 @@ godep save   ./...  # old has no -r godep save and commit that before pushing to
 
 cat Godeps/Godeps.json
 
-## heroku create -b https://github.com/heroku/heroku-buildpack-go.git # Create a new Heroku app using the Go Buildpack:
+// heroku create -b https://github.com/heroku/heroku-buildpack-go.git # Create a new Heroku app using the Go Buildpack:
 
 git commit -a -m "deploying handle static + for Heroku"
 
