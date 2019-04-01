@@ -1,4 +1,5 @@
-// test
+// GO test
+// https://github.com/infchg/j2/
 package main
 
 import (
