@@ -64,3 +64,8 @@ git push heroku master
 ## Cloud run on GC 
 
 refactoring ancient appspot.com version as deployed 2010 in google app engine cloud, presented at STEP 2010, 
+
+
+## Continuos Integration
+
+integrated with Travis CI, this alert us for instance if a .tpl to .tpl.go rename broke the system.
