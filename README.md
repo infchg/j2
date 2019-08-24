@@ -5,6 +5,8 @@ Build:
 + manual checks also Passed 2019-08-24 and 2019 Mar 6th 
 https://travis-ci.org/infchg/j2
 
+![](static/d3diagram.png)
+
 ## Standalone mode in your own docker or server
 
 ``` bash
