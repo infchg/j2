@@ -2,7 +2,7 @@ ss j2Heroku
 
 Build:
 [![Build Status](https://travis-ci.org/infchg/j2.svg)](https://travis-ci.org/infchg/j2) 
-Passed 2019 Mar 6th 
++ manual checks also Passed 2019-08-24 and 2019 Mar 6th 
 https://travis-ci.org/infchg/j2
 
 ## Standalone mode in your own docker or server
