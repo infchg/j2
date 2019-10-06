@@ -31,37 +31,24 @@ Hi this is J2 http response
 
 ## Cloud run on Heroku
 
+``` bash
 echo "web: j2" > Procfile
-
 git add Procfile
-
 git commit -m Procfile
-
-
 go get -u github.com/tools/godep
-
 godep update -goversion
-
 cd $GOPATH/src/github.com/infchg/j2
-
 godep save   ./...  # old has no -r godep save and commit that before pushing to Heroku.
 
- git add -A Godeps
-
+git add -A Godeps
   git commit -m Godeps1.12
-
 cat Godeps/Godeps.json
 
 // heroku create -b https://github.com/heroku/heroku-buildpack-go.git # Create a new Heroku app using the Go Buildpack:
-
 git commit -a -m "deploying handle static + for Heroku"
 
-
-
 git push heroku master
-
-
-
+```
 
 ## Cloud run on GC 
 
