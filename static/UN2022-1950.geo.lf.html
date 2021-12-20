@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <!--link rel="stylesheet" href="style.css"-->
+    
+    <style>
+    #map {
+  height: 700px;
+  border: 1px solid black;
+}
+    </style>
+    
+        <style>  
+.info {
+padding: 6px 8px;
+font: 14px/16px Arial, Helvetica, sans-serif;
+background: white;
+background: rgba(255,255,255,0.8);
+box-shadow: 0 0 15px rgba(0,0,0,0.2);
+border-radius: 5px;
+}
+.legend {
+background-color: “black”;
+line-height: 25px;
+color: #555;
+width: auto;
+}
+.legend i {
+width: 18px;
+height: 18px;
+float: left;
+margin-right: 8px;
+opacity: 0.7;
+}
+</style>
+
+    
+  </head>
+
+  <body>
+    
+    <h2>	UN Peace Missions in 2022 shown over an historical 1950 World Map </h2>
+	There are currently 12 peacekeeping operations led by the UN Department of Peace Operations. January 2022.
+	
+	<p>See how few conflicts last over +50 years, compare current peace operations in 2022  highlighted over historical 1950 country borders.
+	 </p>
+	<!--p>To reflect on the lunacy behind conflicts, see our year 2022 borders and UN operations on an imaginary translation over the Moon.
+	 
+	 Disclaimer: Places with ISOs like AZE HKG UKR TIB GEO TWN not recognized as nations by URSS 1990, few not recognized by PRChina today. 
+	 
+	 do: 
+	 </p-->
+	 
+	 <div id="map"></div>
+
+	<p>sources</p>
+	<p> -  United Nations Peacekeeping site https://peacekeeping.un.org/en/where-we-operate <br/>
+      - historical 1950 basemaps https://github.com/aourednik/historical-basemaps <br/>
+      - github.com/infchg/GeoInt   /blob/master/ISO3world.geo.json    <br/>
+       </p>
+    
+    
+       <script src="../data/1950.geojson.js"></script>  
+    
+    <script >
+	var myStyle = {
+	"color": "#08f",
+	"weight": 1,
+	"stroke-width": 1,
+	"opacity": 0.7
+	};
+
+//abc def ghijk lmno pq rst uvw xyz
+	 function getIColor(d) {
+                return d > "Y" ? '#7a0177' :
+                d > "V"? '#BD0026' :
+                d > "P"? '#E31A1C' :
+                d > "L"? '#FC4E2A' :
+                d > "G" ? '#FD8D3C' :
+                d > "B" ? '#FEB24C' :
+                d > "A" ? '#FED976' :
+                '#9F9D90';  //#fFEDa0
+                }	
+   var map = L.map("map", { minZoom: 1.7, maxZoom: 7, maxBounds: L.latLngBounds(L.latLng(-90, -180), L.latLng(90, 180) ) , })
+               .setView([0, 2], 3);
+
+ // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',  // wrong map non-iso osm
+  var USGS_USImageryTopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+	maxZoom: 20,
+	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
+}).addTo(map); 
+    
+  var NASAGIBS_ViirsEarthAtNight2012 = L.tileLayer('https://map1.vis.earthdata.nasa.gov/wmts-webmerc/VIIRS_CityLights_2012/default/{time}/{tilematrixset}{maxZoom}/{z}/{y}/{x}.{format}', {
+	attribution: 'Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System (<a href="https://earthdata.nasa.gov">ESDIS</a>) with funding provided by NASA/HQ.',
+	bounds: [[-85.0511287776, -179.999999975], [85.0511287776, 179.999999975]],
+	minZoom: 1,
+	maxZoom: 8,
+	format: 'jpg',
+	time: '',
+	tilematrixset: 'GoogleMapsCompatible_Level'
+}).addTo(map);
+  
+
+  var overlays = {
+           "usimag": USGS_USImageryTopo, // dice WS-disp  ---> best1
+            "Nasa": NASAGIBS_ViirsEarthAtNight2012 , //  ---> cool
+    };
+   L.control.layers(null,overlays).addTo(map); 
+  
+    
+// todos d golpe :  L.geoJson(mycountries).bindPopup( 'hola ').addTo(map)
+  
+  // .on('mouseover', function(event){   this.openPopup(); });  
+  
+   console.log( Object.keys( mycountries.features  ) )
+
+  let mp  = new Map();  //no usa
+  let mp2 ={};
+  // cc by cc
+  for ( i in Object.keys( mycountries.features ) ) { 
+	      if (mycountries.features[i].properties.NAME )
+	           {	 
+			  mp.set( mycountries.features[i].properties.WB_CNTRY  , i ); 
+			   mp2[ mycountries.features[i].properties.WB_CNTRY ] = i ;
+			  console.log(mycountries.features[i].properties.NAME ) ;
+			//  console.log(mycountries.features[i].properties.WB_CNTRY in lista ) ;
+			  geo = mycountries.features[i] ;
+		
+		/* adding all or later */
+			   // L.geoJson(geo)		  
+
+			     //     L.geoJson(geo, {style: myStyle  })
+			        
+			  L.geoJson(geo, {style: {weight: 1, color: getIColor(mycountries.features[i].properties.WB_CNTRY) } })
+				.bindPopup( mycountries.features[i].properties.NAME  + "</br>" +  mycountries.features[i].properties.FIPS_CODE + "</br>" +  mycountries.features[i].properties.WB_CNTRY )
+				  .addTo(map)
+					 .on('mouseover', function(event){   this.openPopup(); });  
+		
+		
+			   }
+	    };
+  
+  
+ //ops
+  let ops = {ESH: "Minurso", ISR:"UNTSO", CAF: "Minusca", PAK:"Unmogip", LBN:"UNmil", ZAR:"Monusco" , MLI:"Minusma", SDN:"Unmiss & Unisfa", SYR:"UNDOF", YUG:"UNMIK" };
+  // UN Peace Miassions as of 2022 , lista = [ "ESH", "ISR", "TIB", "PAK", "COL", "CAR", "ZAR" , "SUD", "SYR"  ]; 
+  let  lista =  Object.keys( ops ) // [ "ESH", "ISR", "CAF", "PAK", "COL", "SOM", "ZAR" , "LYB", "SDN", "SYR"  ];  // UN Peace Miassions as of 2022 
+  
+       console.log("INCLUSION",Object.keys( ops ) );
+ console.log( mp , mp['ESP'], mp2 , mp2['ESP'],  mycountries.features[ mp2['ESP']].properties.NAME  ) ;  // mp2 has the hash
+   console.log(   lista ) ;
+
+ 	 lista.forEach(k => {  i =  mp2[k]
+		                   console.log(k , i ) 
+		                   geo = mycountries.features[ i ] 
+		    
+		       L.geoJson(geo, {style: {color: "#ffff00"} })
+				.bindPopup( mycountries.features[i].properties.NAME  + " " +  mycountries.features[i].properties.FIPS_CODE + " " +  mycountries.features[i].properties.WB_CNTRY + "</br>" + ops[k] )
+				  .addTo(map)
+					 .on('mouseover', function(event){   this.openPopup(); });  
+		                 } 
+ 	                 );
+
+
+//legend  console.log( getIColor("INCLUSION" ), "col" );
+// legend 
+    var legend = L.control({position: 'bottomright'});
+// 
+legend.onAdd = function(map){ 
+
+        var div = L.DomUtil.create('div', 'info legend'),
+        grades = ["Afg","Can","Gab","Lao","Pak","V","Yem"];
+ div.innerHTML += '<i style="background:yellow">+</i> UN-dpko<br/><b>and WB/ISO code:</b><br/>' ;
+        for (var i = 0; i < grades.length; i++) {
+                div.innerHTML += '<i style="background:' + getIColor(grades[i] + 1) + '">+</i>' + grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+        }
+//
+   return div;
+  };
+//return '<div class="info legend">A <br/> B</div>'} ;
+ // 
+  legend.addTo(map);
+  </script>
+    
+ ISO3
+ - http://travel.fyicenter.com/Country/Country_Name_ISO3_Code_List.php?S=1D   http://travel.fyicenter.com/Country/_EH_Western_Sahara.html
+ - lang http://www.loc.gov/standards/iso639-2/php/code_list.php  https://github.com/SuzanaK/language_datasets/blob/master/data/iso3_language_codes_with_geo_coordinates.csv
+ - cc https://www.iban.com/country-codes   https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3 https://en.wikipedia.org/wiki/Western_Sahara
+  </body>
+
+</html>
