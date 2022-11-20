@@ -6,6 +6,8 @@
 
 ## Quantum Information
 
+- Poster at BeyondC 2019 Oct 28–30: Quantum Information Systems Beyond Classical Capabilities, Vienna, Austria.
+
 
 ## Team notes
 
