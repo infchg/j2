@@ -7,7 +7,8 @@
 ## Quantum Information
 
 - Poster at BeyondC 2019 Oct 28–30: Quantum Information Systems Beyond Classical Capabilities, Vienna, Austria.
-
+- Physics-Based Model of Information, including QKD 
+  -  J.C. Martínez; L. de Haro; A. González, Simulation Model Applied to IP Protocols and Satellite Communications, https://ieeexplore.ieee.org/document/5502488
 
 ## Team notes
 
