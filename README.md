@@ -105,13 +105,11 @@ Innovation beyond Agile Six Sigma: Listen & innovate designs, measure, analyze, 
 
 ---
 
+#### META
 
-ss j2Heroku 
+- this doc: https://github.com/infchg/j2/blob/master/README.md
+- previous 2019 version j2Heroku Build: [![Build Status](https://travis-ci.org/infchg/j2.svg)](https://travis-ci.org/infchg/j2) 
++ manual checks also Passed 2019-08-24 and 2019 Mar 6th  https://travis-ci.org/infchg/j2
+- CI/CD passed too: on repo's Actions tab, Under Workflows, pages-build-deployment no errors in the runs.  
 
-Build:
-[![Build Status](https://travis-ci.org/infchg/j2.svg)](https://travis-ci.org/infchg/j2) 
-+ manual checks also Passed 2019-08-24 and 2019 Mar 6th 
-https://travis-ci.org/infchg/j2
-
-![](static/d3diagram.png)
 
