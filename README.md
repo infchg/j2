@@ -1,3 +1,111 @@
+_brief_: https://github.com/infchg/j2?  _former_: https://infchg.github.io/QI?
+  
+#  🌌 Interest: Thinking about fundamental questions
+
+
+# Steps when Exploring the Nature of Quantum Information
+
+- Past steps: Theoretical [Physics-Based-Information-Models](#-Physics-Based-Information-Models) published with QKD examples. 
+- Recent research on [QI-Tools-Applications](#-QI-Tools--Applications) with Hilbert space and Bloch sphere
+- Next proposal: inter-disciplinary collaboration [planned 2022-23](#planned-2022-23) nearby NYC, part-time, bringing:
+   - Two decades achieving complex IT goals, by integrating Teams, Hardware, Instruments, Bus, Linux, Network, DevOps, Python, Cloud 
+   - & Ability to understand the theory, matrix operators, eigenstates, ... and some notions learnt from experimentalists and QisKit 
+
+# Planned 2022-23
+
+*Part-time* due to current commitment delivering a technology project full-time:
+
+- 2022 submitting new journal paper on Bloch & QI framework + another measured from real QC circuits 
+- 2023 Q1Q2 collaborations nearby NY towards cloud quantum computing
+
+#  🌱 Physics-Based Information Models 
+
+Proposed Physics-Based Models (alike Toffoli, Benioff, Kirchhoff) and Feynman-charts of Information Change.
+
+ -   "Simulation model applied to IP protocols and satellite communications", Int'l Conf. Advances in Satellite and Space Communications, 2010, pp.122–127, Martínez, J.C., De Haro, L., González, A. https://IEEExplore.IEEE.org/document/5502488 DOI.org/10.1109/spacomm.2010.34 ISBN:9781424472758 on QKD
+ -   "Particle-based methodology for representing mobile ad-hoc networks", Int'l Conf. Integrated internet ad hoc and sensor networks ACM, 2006, https://DOI.org/10.1145/1142680.1142685 ISBN:1595934278 oa.upm.es/1666
+
+#  🌱 QI Tools & Applications 
+
+Exploring common frameworks to represent light modes coding qubits across diverse experiments
+
+  -  on Bloch-R3 tools across diverse physical modes, orbital, temporal, parity, spin, … much improved from public preprint  researchgate.net/publication/356697550_Comparative_Analysis_of_Spin_Paths_Temporal_and_Spatial_Modes
+  -  on Verifying quantum information designs with Conservation Laws and Change diagrams, BeyondC 2019 Vienna, pp.22 #34, https://beyondc.at/fileadmin/user_upload/p_beyondc/Conference_2019/Book_of_Abstracts.pdf 
+    
+#  ♥ Thanks to past teams and collaborators.
+
+With gratitude to teams who accepted posters contributions during PhD studies and helped evolve these ideas from early stages:
+
+ -   "Mathematical model for specification and inter-operation between experiments and tools", Neutrinos & Dark Matter in Nuclear Physics, 2006, pp.909-914 http://iaea.org/inis/collection/NCLCollectionStore/_Public/39/005/39005128.pdf pp4
+ -  "Quantum Modeling using Information-Particles", TQC2007 Theory of Quantum Computation, Communication, & Cryptography, Jan 24-25 2007 Nara Japan ,  brl.ntt.co.jp/tqc/2007/en/program.htm [] "Physics Oriented objects for modeling QIP", QIP 2007, Australia, Jan 2007,  qinfo.org/qip/program.htm
+ 
+ And MSEE/CS Background: Master of Electrical Engineering (MScEE equivalence certified in California) + a progressive career in hardware and software computing with Industry Agile DevOps,
+ 
+ - @ current: planning Open Cloud Tool - Ongoing - Queue monitoring for Quantum Processing queues in a light dashboard
+ - @ IAEA Vienna 2020: Architect & Prototype Hardware&System for ML analysis of Cherenkov UV light images from world nuclear plants 
+ - @ WOCE Support 95: Integrated Gravimeter instrumentation (formerly at NASA [satellite](https://icebridge.gsfc.nasa.gov/?page_id=180)) from hardware to internet data pipelines.
+
+
+
+
+## 👋 Nearby
+
+Information-Change J-C - https://github.com/infchg/j2? - tel: (917) 815 xxxx - New York, NY 
+ 
+ $$V_{sphere} = \frac{4}{3}\pi r^3$$
+
+
+```geojson
+{
+  "type": "Polygon",
+  "jccomm": "just removed         //  [-78,43], ",
+  "coordinates": [
+      [
+          [-76,40],
+          [-75,42],
+          [-70,43],
+          [-74,39.5]
+      ]
+  ]
+}
+```
+ 
+
+
+## 📕 Reference Principles & Productivity Ideas
+### Delivering by Agile & Modern https://modernagile.org/
+
+Fostering Models & Methods in collaborations:
+
+Historic agile XP boosted interdisciplinary teams since 2001, from teams analyzing data to developers to hardware engineers accessing states at tiny fractions of a second. ModernAgile has four pillars: 
+
+- People collaborations enhanced (Git & Jupyter Notebooks);
+- Repeat and Continuously Improve (automated pipelines); 
+- allowing rapid experimentation;
+-  Safe by working in pairs, consumer/provider. It avoided hw/coders overwhelmed or analysts/theorist disappointed.
+
+```mermaid
+graph LR;
+    People-->Continuous;
+ 
+   Continuous-->Safe;
+   Safe-->Rapid;
+   Rapid-->People;
+   
+```
+
+Why ? Generic & Simple frameworks boost human innovation, helping rapid building & repetition:
+
+   In the 70s, the DoD's Internet Protocol made easy to grow communications exponentially. In the 90’s the CERN's Web open format radically boosted the information exchange. In 201x's QC offer on cloud gave seamless access to Quantum Computers for hundreds of thousands researchers. 
+
+
+Innovation beyond Agile Six Sigma: Listen & innovate designs, measure, analyze, continuously automate, communicate & control.
+ 
+
+
+---
+
+
 ss j2Heroku 
 
 Build:
@@ -7,54 +115,3 @@ https://travis-ci.org/infchg/j2
 
 ![](static/d3diagram.png)
 
-## Standalone mode in your own docker or server
-
-``` bash
-
-go get -u github.com/infchg/j2 
-
-
-go install ./...
-
-PORT=3333 $GOPATH/bin/j2
-
-curl -i http://localhost:3333
-
-HTTP/1.1 200 OK
-Date: Wed, 06 Mar 2019 00:26:40 GMT
-Content-Length: 28
-Content-Type: text/plain; charset=utf-8
-
-Hi this is J2 http response
-
-```
-
-## Cloud run on Heroku
-
-``` bash
-echo "web: j2" > Procfile
-git add Procfile
-git commit -m Procfile
-go get -u github.com/tools/godep
-godep update -goversion
-cd $GOPATH/src/github.com/infchg/j2
-godep save   ./...  # old has no -r godep save and commit that before pushing to Heroku.
-
-git add -A Godeps
-  git commit -m Godeps1.12
-cat Godeps/Godeps.json
-
-// heroku create -b https://github.com/heroku/heroku-buildpack-go.git # Create a new Heroku app using the Go Buildpack:
-git commit -a -m "deploying handle static + for Heroku"
-
-git push heroku master
-```
-
-## Cloud run on GC 
-
-refactoring ancient appspot.com version as deployed 2010 in google app engine cloud, presented at STEP 2010, 
-
-
-## Continuos Integration
-
-integrated with Travis CI, this alert us for instance if a .tpl to .tpl.go rename broke the system.
