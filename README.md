@@ -2,11 +2,11 @@ _brief_: https://github.com/infchg/j2?  _former_: https://infchg.github.io/QI?
   
 #  🌌 Interest: Thinking about fundamental questions
 
+Quantum Information for practical usages, as well as theoretical tools for exploring Nature 
 
-# Steps when Exploring the Nature of Quantum Information
-
+# Profile: Past, Planned
 - Past steps: Theoretical [Physics-Based-Information-Models](#-Physics-Based-Information-Models) published with QKD examples. 
-- Recent research on [QI-Tools-Applications](#-QI-Tools--Applications) with Hilbert space and Bloch sphere
+- Recent research on [QI-Tools-Applications](#-QI-Tools--Applications) with Hilbert space and Bloch sphere 
 - Next proposal: inter-disciplinary collaboration [planned 2022-23](#planned-2022-23) nearby NYC, part-time, bringing:
    - Two decades achieving complex IT goals, by integrating Teams, Hardware, Instruments, Bus, Linux, Network, DevOps, Python, Cloud 
    - & Ability to understand the theory, matrix operators, eigenstates, ... and some notions learnt from experimentalists and QisKit 
