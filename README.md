@@ -72,7 +72,10 @@ Information-Change J-C - https://github.com/infchg/j2? - tel: (917) 815 xxxx - N
  
 
 
-## 📕 Reference Principles & Productivity Ideas
+## 📕 Reference on new methods of investigation, and new collaborations 
+
+Principles & Productivity Ideas
+
 ### Delivering by Agile & Modern https://modernagile.org/
 
 Fostering Models & Methods in collaborations:
@@ -94,12 +97,19 @@ graph LR;
    
 ```
 
-Why ? Generic & Simple frameworks boost human innovation, helping rapid building & repetition:
+### Simple Generic frameworks helped build and repeat easily, boosting innovation 
 
-   In the 70s, the DoD's Internet Protocol made easy to grow communications exponentially. In the 90’s the CERN's Web open format radically boosted the information exchange. In 201x's QC offer on cloud gave seamless access to Quantum Computers for hundreds of thousands researchers. 
+   In the 70s, the DoD's Internet Protocol grew communications exponentially. In the 90’s the CERN's Web open radically boosted information exchange. In 201x's Quantum Computers seamless access helped hundreds of thousands researchers. 
 
+### Effective 5 steps Innovation
 
-Innovation beyond Agile Six Sigma: Listen & innovate designs, measure, analyze, continuously automate, communicate & control.
+Applied recurrently this method inspired in Agile Six Sigma:
+
+- Listen & innovate designs, 
+- measure, 
+- analyze, 
+- continuously automate, 
+- communicate & control.
  
 
 
