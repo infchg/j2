@@ -72,13 +72,16 @@ Information-Change J-C - https://github.com/infchg/j2? - tel: (917) 815 xxxx - N
  
 
 
-## 📕 Reference on new methods of investigation, and new collaborations 
+## 📕 Reference, new methods of investigation, and new collaborations 
 
 Principles & Productivity Ideas
 
-### Notebooks for sharing codes and results
+### Leveraging JuPyter Notebooks for sharing QI codes and results  
 
 Example of codes & results using  Azure, QisKit, and IonQC ![](AzQisKitIon.JPG) 
+
+Examples launched from a Jupyter Notebook to IBM-QC ![](ibm-q-jobss.png)
+
 
 ### Delivering by Agile & Modern https://modernagile.org/
 
