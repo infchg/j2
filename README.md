@@ -42,8 +42,8 @@ With gratitude to teams who accepted posters contributions during PhD studies an
  And MSEE/CS Background: Master of Electrical Engineering (MScEE equivalence certified in California) + a progressive career in hardware and software computing with Industry Agile DevOps,
  
  - @ current: planning Open Cloud Tool - Ongoing - Queue monitoring for Quantum Processing queues in a light dashboard
- - @ IAEA Vienna 2020: Architect & Prototype Hardware&System for ML analysis of Cherenkov UV light images from world nuclear plants 
- - @ WOCE Support 95: Integrated Gravimeter instrumentation (formerly at NASA [satellite](https://icebridge.gsfc.nasa.gov/?page_id=180)) from hardware to internet data pipelines.
+ - @ IAEA Vienna 2020: Architect & Prototype Hardware+IT for ML analysis of Cherenkov UV light images from nuclear plants 
+ - @ WOCE Support 95: Integrated Gravimeter instrument (former NASA [satellite](https://icebridge.gsfc.nasa.gov/?page_id=180)) from hardware to internet data pipeline
 
 
 
