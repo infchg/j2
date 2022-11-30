@@ -7,9 +7,9 @@ Quantum Information for practical usages, as well as theoretical tools for explo
 # Profile: Past, Planned
 - Past steps: Theoretical [Physics-Based-Information-Models](#-Physics-Based-Information-Models) published with QKD examples. 
 - Recent research on [QI-Tools-Applications](#-QI-Tools--Applications) with Hilbert space and Bloch sphere 
-- Next proposal: inter-disciplinary collaboration [planned 2022-23](#planned-2022-23) nearby NYC, part-time, bringing:
-   - Two decades achieving complex IT goals, by integrating Teams, Hardware, Instruments, Bus, Linux, Network, DevOps, Python, Cloud 
-   - & Ability to understand the theory, matrix operators, eigenstates, ... and some notions learnt from experimentalists and QisKit 
+- Next proposal: inter-disciplinary collaboration [planned 2022-23](#planned-2022-23) nearby NYC, part-time:
+   - bring two decades achieving complex IT with Teams, Hardware, Instruments, Linux, Routes, DevOps, Python, Cloud 
+   - & works with QI theory, matrix operators, eigenstates... plus experiment notions from papers and QisKit 
 
 # Planned 2022-23
 
