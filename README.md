@@ -76,6 +76,10 @@ Information-Change J-C - https://github.com/infchg/j2? - tel: (917) 815 xxxx - N
 
 Principles & Productivity Ideas
 
+### Notebooks for sharing codes and results
+
+Example of codes & results using  Azure, QisKit, and IonQC ![](AzQisKitIon.JPG) 
+
 ### Delivering by Agile & Modern https://modernagile.org/
 
 Fostering Models & Methods in collaborations:
