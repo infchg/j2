@@ -14,29 +14,26 @@ Proposed Physics-Based Models (alike Toffoli, Benioff, Kirchhoff) and Feynman-ch
 #  🌱 QI Tools & Applications 
 
 Exploring common frameworks to represent light modes coding qubits across diverse experiments
- 
-#  ♥ Thanks to past teams and collaborators.
 
-With gratitude to teams who accepted posters contributions during PhD studies and helped evolve these ideas from early stages:
-
- 
-
- 
-```stl
- 
-```
- 
-
-
-## 📕 Reference, new methods of investigation, and new collaborations 
-
-Principles & Productivity Ideas
+## 📕 ongoing research and lines of collaboration
 
 ### Leveraging JuPyter Notebooks for sharing QI codes and results  
 
 Example of codes & results using  Azure, QisKit, and IonQC ![](AzQisKitIon.JPG) 
 
 Examples launched from a Jupyter Notebook to IBM-QC ![](ibm-q-jobss.png)
+
+### QC Queues evolving in Time
+
+![](qc-queues.png)
+
+
+
+
+## 📕 Reference, new methods of investigation, and new collaborations 
+
+Principles & Productivity Ideas
+
 
 
 ### Delivering by Agile & Modern https://modernagile.org/
@@ -73,6 +70,18 @@ Applied recurrently this method inspired in Agile Six Sigma:
 - analyze, 
 - continuously automate, 
 - communicate & control.
+ 
+
+#  ♥ Thanks to past teams and collaborators.
+
+With gratitude to teams who accepted posters contributions during PhD studies and helped evolve these ideas from early stages:
+
+ 
+
+ 
+```stl
+ 
+```
  
 
 
