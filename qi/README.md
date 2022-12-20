@@ -32,6 +32,19 @@ Exploring common frameworks to represent light modes coding qubits across divers
   -  on Bloch-R3 tools across diverse physical modes, orbital, temporal, parity, spin, … much improved from public preprint  researchgate.net/publication/356697550_Comparative_Analysis_of_Spin_Paths_Temporal_and_Spatial_Modes
   -  on Verifying quantum information designs with Conservation Laws and Change diagrams, BeyondC 2019 Vienna, pp.22 #34, https://beyondc.at/fileadmin/user_upload/p_beyondc/Conference_2019/Book_of_Abstracts.pdf 
     
+## 📕 ongoing research and open areas for collaboration
+
+### Leveraging JuPyter Notebooks for sharing QI codes and results  
+
+Example of codes & results using  Azure, QisKit, and IonQC ![](../AzQisKitIon.JPG) 
+
+Examples launched from a Jupyter Notebook to IBM-QC ![](../ibm-q-jobss.png)
+
+### QC Queues evolving in Time
+
+![](../qc-queues.png)    
+    
+    
 #  ♥ Thanks to past teams and collaborators.
 
 With gratitude to teams who accepted posters contributions during PhD studies and helped evolve these ideas from early stages:
@@ -72,15 +85,9 @@ Information-Change J-C - https://github.com/infchg/j2? - tel: (917) 815 xxxx - N
  
 
 
-## 📕 Reference, new methods of investigation, and new collaborations 
+## 📕 Reference, new methods of investigation, and collaborations 
 
 Principles & Productivity Ideas
-
-### Leveraging JuPyter Notebooks for sharing QI codes and results  
-
-Example of codes & results using  Azure, QisKit, and IonQC ![](AzQisKitIon.JPG) 
-
-Examples launched from a Jupyter Notebook to IBM-QC ![](ibm-q-jobss.png)
 
 
 ### Delivering by Agile & Modern https://modernagile.org/
